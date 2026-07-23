@@ -1,0 +1,728 @@
+/*  VARIABLES CSS (:root) */
+:root {
+    --primary: #2563eb;
+    --secondary: #f59e0b;
+    --dark: #0a0a30;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+    --bg: #ffffff;
+    --text:#000000;
+}
+
+
+/*  DARK MODE */
+body.dark {
+    --bg: #0f172a !important;
+    --text: #f1f5f9 !important;
+    
+}
+
+/*  RESET CSS */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+section {
+    padding: 4rem 5%;
+}
+
+/* TYPOGRAPHIE */
+h2 { 
+    font-size: 2rem; 
+    text-align: center; 
+    color: #0760e6; 
+}
+
+h3 { 
+    font-size: 1.25rem;
+ }
+
+/*  ACCESSIBILITÉ */
+:focus-visible {
+    outline: 2px solid var(--primary);
+}
+
+/* BOUTONS */
+.btn {
+    padding: 10px 20px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 5%;
+}
+
+.btn-circle {
+  width: 40px;          
+  height: 40px;         
+  padding: 0;           
+  border-radius: 50%;   
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  HEADER  */
+header {
+    background-color: #050b27;
+    padding: 20px 5%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* --- CONFIGURATION DU HEADER --- */
+.navbar {
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* A droite (liens + bouton mode sombre + hamburger) */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Alignement des liens */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+/*  Bouton hamburger par défaut sur grand écran */
+.hamburger {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+        .hamburger {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Ajustement du menu déroulant sur mobiles */
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary, #0760e6);
+        padding: 20px;
+    }
+
+    /*  Ouvertur du manu via JS (classe active) */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/*  Couleur bouton Menu et mode sombre/clair */
+.hamburger.btn-circle, 
+#theme-toggle.btn-circle {
+    background-color: #03061b; 
+    color: #ffffff;            
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links.active {
+        background-color: #03061b; 
+    }
+}
+
+/*  NAVBAR APRÈS LE SCROLL */
+.navbar-scrolled {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: var(--white);
+}
+
+/*  NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 70%;
+    overflow: hidden;
+}
+.logo-box img {
+    max-width: 230px;
+    height: auto;
+    width: auto;
+    display: block;
+}
+
+.logo-box span {
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Réduction logo et ecriture sur mobile */
+@media (max-width: 600px) {
+    header {
+        padding: 8px 5px !important; 
+    }
+
+    .logo-box {
+        max-width: 65% !important; 
+        gap: 8px;
+    }
+
+    .logo-box img {
+        max-width: 85px !important; 
+    }
+
+    .nav-right {
+        gap: 4px !important; 
+        margin-right: 0 !important;
+    }
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+nav a {
+    color: #ffffff !important;
+}
+
+nav span {
+    color: #ffffff !important;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+
+/*  HERO */
+#hero {
+    background: transparent;
+    padding: 6rem 5% 2rem 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/*  Conteneur Mère */
+.hero-container-wrapper {
+    background-color: transparent;
+    color: var(--white);
+    padding-bottom: 4rem;
+    width: 100%;
+}
+
+.cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+    html, body {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    header, .navbar, .nav-container, header > div {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    /* Decallage boutons menu et mode sombre/clair vers la droite */
+    header .nav-right,
+    header .buttons-container,
+    .navbar-actions,
+    .menu-icons-group {
+        margin-left: 8px !important;
+    }
+
+    header #theme-toggle,
+    header .hamburger,
+    .navbar #theme-toggle,
+    .navbar .hamburger {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        min-height: 32px !important;
+        font-size: 13px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    #hero {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .cta-group {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        box-sizing: border-box !important;
+    }
+
+    .cta-group a, 
+    .cta-group button {
+        width: 38% !important;
+        max-width: 120px !important;
+        padding: 8px 4px !important;
+        font-size: 11px !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+    }
+}
+
+
+/* COMPTE À REBOURS */
+#countdown {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 0.8) !important; 
+    font-weight: 900 !important; 
+    letter-spacing: 1px;
+}
+
+/*  SECTION CHIFFRES */
+#chiffres {
+    background: transparent;
+    padding: 2rem 5%;
+    margin-top: 0;
+    width: 100%;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 3.5rem !important; 
+    font-weight: 800 !important;  
+    color: #39ff14 !important;    
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); 
+}
+
+.stat-item p {
+    color: #ffffff !important;    
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/*  POURQUOI PARTICIPER */
+#pourquoi {
+    padding: 3rem 2%;
+    background-color: #0eecb8;
+    position: relative;
+    z-index: 1;
+}
+
+#pourquoi h2 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; 
+        align-items: center;    
+    }
+
+    #pourquoi .card {
+        width: 100%;          
+        max-width: 400px;     
+    }
+}
+
+.icon {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff4f4;
+    border-radius: 50%;
+}
+
+.icon i {
+    font-size: 28px;
+    color: #25b3eb;
+}
+
+/* STYLE DES CARTES "POURQUOI PARTICIPER" */
+#pourquoi .card {
+    border: 2px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 30px;
+    flex: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card.card-Innovation {
+    background-color: #ff9f43 !important;
+}
+
+.card.card-Réseautage {
+    background-color: #e13ac8 !important;
+}
+
+.card.card-Inspiration {
+    background-color: #31d817 !important;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary);
+    cursor: pointer;
+}
+
+/*  INTERVENANTS VEDETTES */
+#intervenants-vedettes {
+    padding: 3rem 2%; 
+    background-color: #450606;
+}
+
+#intervenants-vedettes h2 {
+    margin-bottom: 50px; 
+}
+
+.intervenants-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 35px; 
+    padding: 0 10px; 
+}
+
+.intervenants-grid .card {
+    background: #ffffff;
+    border: 1px solid #2778e3;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.intervenants-grid .card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.intervenants-grid .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.btn-voir-plus {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--primary);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/*  SPONSORS */
+#sponsors {
+    padding: 2rem 5%;
+    text-align: center;
+    background-color: #ff7f50;
+}
+
+#sponsors h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.sponsors-flex {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.intervenants-grid .card .pays {
+    font-size: 0.9rem;      
+    color: #1031e7;         
+    font-style: italic;     
+    margin-top: 5px;        
+    text-transform: uppercase; 
+    letter-spacing: 0.5px;
+}
+
+/* stylisation  des sponsors */
+.or {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #d4af37; 
+}
+
+.argent {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #a0a0a0; 
+}
+
+.bronze {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #cd7f32; 
+}
+
+/*  HERO INTERNE */
+#hero-interne {
+    padding: 0;
+    background: transparent;
+    text-align: center;
+}
+
+#hero-interne h1 {
+    margin-top: 150px !important;
+    margin-bottom: -30px !important;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
+    font-weight: bold;
+}
+
+.header-image-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                url('../images/images.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+/*  FIL D'ARIANE */
+nav[aria-label="Fil d'Ariane"] {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0a0a30;
+    color: white;
+    padding: 60px 5%;
+}
+
+.footer-top {
+    margin-bottom: 40px;
+}
+
+.footer-divider {
+    height: 3px;
+    background-color: #22c55e;
+    margin: 40px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-right {
+    margin-right: 0; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-reduit {
+    height: 120px;
+    width: auto;
+    position: relative;
+    margin-left: 0 !important;
+}
+
+@media (max-width: 600px) {
+    .logo-reduit {
+        max-width: 80px; 
+        height: auto;
+        margin-left: 0 !important;
+    }
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul { display: none; }
+    .hamburger { display: block; }
+}
+
+/* Conteneur vidéo  */
+#hero-video-section {
+    position: relative;
+    width: 100%;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: hidden;
+}   
+
+/* Video en position absolut */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Transparance pour la video  */
+.hero-container-wrapper,
+#hero,
+#chiffres {
+    background-color: transparent !important;
+    position: relative;
+    z-index: 2;
+}
+
+#grille-intervenants {
+    background-color: #364949;
+    position: relative;
+    z-index: 1;
+}
