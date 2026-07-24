@@ -3,6 +3,7 @@ const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const themeIcon = themeToggle.querySelector('i');
 
+/* Fonction d'actualisatoin de l'icône selon le mode actif du bouton (lune ou soleil) */
 function updateIcon(isDark) {
     if (isDark) {
         themeIcon.classList.replace('fa-moon', 'fa-sun');
@@ -11,6 +12,7 @@ function updateIcon(isDark) {
     }
 }
 
+/* Fonction de rétrer dynamique des styles CSS globaux en mode sombre*/
 function applyForceDarkMode() {
     const isDark = document.body.classList.contains('dark');
     let styleTag = document.getElementById('force-dark-style');
@@ -22,6 +24,7 @@ function applyForceDarkMode() {
             document.head.appendChild(styleTag);
         }
     
+         /* Injection du CSS brut pour forcer les couleurs sombres sur l'ensemble de la page*/
         styleTag.innerHTML = `
             body.dark, 
             body.dark *:not(.card-innovation):not(.stat-item), 
@@ -41,6 +44,8 @@ function applyForceDarkMode() {
         styleTag.remove();
     }
 }
+
+/* Écouteur d'événement quant on clic sur le bouton pour basculer le thème*/
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark');
     const isDark = body.classList.contains('dark');
@@ -61,6 +66,7 @@ const header = document.querySelector('header');
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
+// Modification de l'apparence du header lorsque l'utilisateur fait défiler la page vers le bas
 window.addEventListener('scroll', () => {
     if (window.scrollY > 80) {
         header.classList.add('navbar-scrolled');
@@ -69,6 +75,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
+
+// Ouvrture ou fermeture du menu de navigation mobile en clicant sur le bouton hamburger
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
@@ -85,11 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const s = document.getElementById('seconds');
 
     if (d && h && m && s) {
+        // Mise à jour du compte à rebours toutes les secondes (1000 ms)
         setInterval(() => {
             const now = new Date().getTime();
             const diff = targetDate - now;
 
             if (diff > 0) {
+        // Calcule et affiche les jours, heures, minutes et secondes avec un formatage à 2 chiffres
                 d.innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
                 h.innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
                 m.innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
@@ -102,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* 4. ANIMATION STATISTIQUES AU SCROLL */
 const statsSection = document.getElementById('chiffres');
 if (statsSection) {
+    // Utilisation l'IntersectionObserver pour déclencher l'animation quand la section est visible à l'écran
     const observerStats = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -111,7 +122,8 @@ if (statsSection) {
                     const target = parseInt(fullText.replace('+', '')); 
                     let current = 0;
                     const increment = Math.max(1, Math.ceil(target / 50));
-                    
+
+    /* Fonction récursive pour incrémentation progressive du chiffre */         
                     const update = () => {
                         if (current < target) {
                             current += increment;
@@ -131,12 +143,13 @@ if (statsSection) {
 }
 
 /* 5. ONGLETS PROGRAMME (programme.html) */
-function showDay(day) {
+
+function showDay(day) {    //Afffiche le contenue du jour selectionné
     document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
-    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));      /*retire le classe active des boutons*/
     
     document.getElementById(`day${day}`).style.display = 'block';
-    event.currentTarget.classList.add('active');
+    event.currentTarget.classList.add('active');   /* Active le bouton cliqué*/
 }
 
 /* 6. FILTRAGE INTERVENANTS  */
@@ -150,6 +163,8 @@ filterBtns.forEach(btn => {
         
         const category = btn.getAttribute('data-filter');
         cards.forEach(card => {
+
+             // Affiche ou masque la carte selon si elle appartient à la catégorie sélectionnée
             if (category === 'all' || card.getAttribute('data-category') === category) {
                 card.classList.remove('hidden');
             } else {
@@ -191,6 +206,7 @@ document.querySelectorAll('footer p').forEach(p => {
     }
 });
 
+// Anime l'apparition de la carte du formulaire à l'écran
 document.addEventListener("DOMContentLoaded", () => {
     const carte = document.querySelector('.form-card');
 
