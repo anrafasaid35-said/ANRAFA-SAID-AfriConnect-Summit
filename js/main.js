@@ -139,3 +139,75 @@ function showDay(day) {
     event.currentTarget.classList.add('active');
 }
 
+/* 6. FILTRAGE INTERVENANTS  */
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.intervenant-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const category = btn.getAttribute('data-filter');
+        cards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+    });
+});
+
+/* 7. VALIDATION FORMULAIRE */
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+
+        if (email.includes('@') && phone.length >= 8 && message.length >= 20) {
+            document.getElementById('formSuccess').innerText = "Inscription réussie !";
+            contactForm.reset();
+        } else {
+            alert("Veuillez vérifier vos champs (Email, Téléphone 8 chiffres, Message 20 chars).");
+        }
+    });
+}
+
+/* 8. BOUTON RETOUR EN HAUT */
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+    backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+});
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* 9. ANNÉE DYNAMIQUE FOOTER */
+document.querySelectorAll('footer p').forEach(p => {
+    if (p.innerText.includes('2026')) {
+        p.innerText = p.innerText.replace('2026', new Date().getFullYear());
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const carte = document.querySelector('.form-card');
+
+    const observer = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                carte.classList.add('visible');
+                observerInstance.unobserve(entry.target);
+            }
+        });
+    }, {
+        
+        threshold: 0.5 
+    });
+
+    if (carte) {
+        carte.classList.remove('visible');
+        observer.observe(carte);
+    }
+});
