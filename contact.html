@@ -4,11 +4,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnect Summit - Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
- <script src="js/main.js"></script> 
-      
+
+        <div id="hero-video-section">
+                    <video autoplay muted loop playsinline preload="auto" class="bg-video">
+                        <source src="images/video/cont.mp4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge les vidéos.
+                    </video>
+                
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-box">
+                <img class="object-contain w-full h-full" src="https://admin.connected.go.ke/assets/8df352de-292b-4d9a-ac09-a6adfcd57780" alt="Logo">
+            </a>
+                            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    </ul>    
+                        <button id="theme-toggle" class="btn btn-outline-light btn-circle">
+                        <i class="fa-solid fa-moon"></i>
+                        </button>
+
+                        <button class="hamburger btn-circle" id="hamburger">≡</button>
+                                                
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<!-- HERO INTERNE -->
+<section id="hero-interne">
+    <h1>Inscription & Contact</h1>
+    <nav aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span>Contact</span>
+    </nav>
+
+</section>
+
+<!-- FORMULAIRE D INSCRIPTION -->
+<section id="form-section" class="contact-container">
+    <div class="form-card">
+    <h2>Inscrivez-vous</h2>
+    <form id="contactForm">
+        <div class="form-group-row">
+            <input type="text" id="name" placeholder="Nom complet" required>
+            <input type="email" id="email" placeholder="Email" required>
+        </div>
+        
+        
+        <div class="form-group-row">
+            <input type="tel" id="phone" placeholder="Téléphone (min 8 chiffres)" required>
+            <select id="participation" required>
+                <option value="">Choisir le type de participation</option>
+                <option>Présentiel</option>
+                <option>Distanciel</option>
+            </select>
+        </div>
+
+        <!-- Liste complète des pays -->
+        <select id="country" required>
+            <option value="">Choisir votre pays</option>
+            <option>Sénégal</option>
+            <option>Nigeria</option>
+            <option>Kenya</option>
+            <option>Côte d'Ivoire</option>
+            <option>Ghana</option>
+            <option>Éthiopie</option>
+            <option>Afrique du Sud</option>
+            <option>Maroc</option>
+            <option>Rwanda</option>
+            <option>Ouganda</option>
+        </select>
+
+        <textarea id="message" placeholder="Votre motivation (min 20 caractères)" required></textarea>
+        
+        <button type="submit" class="submit-btn">Envoyer mon inscription</button>
+        <div id="formSuccess"></div>
+    </form>
+</div>
+
+</section>
+        </div>
+
+<main>       
+<!-- FAQ EN ACCORDÉON SUR CSS PUR -->
+<section id="faq">
+    <h2>Questions fréquentes</h2>
+    <div class="accordion">
+        <div class="faq-item">
+            <input type="checkbox" id="q1">
+            <label for="q1">
+                Comment s'inscrire au AfriConnect Summit ?
+                
+            </label>
+            <div class="answer">
+                <p>
+                    L'inscription se fait en remplissant le formulaire
+                    d'inscription disponible sur cette page.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="q2">
+            <label for="q2">
+                Où aura lieu l'événement ?
+               
+            </label>
+            <div class="answer">
+                <p>
+                    L'événement aura lieu à Dakar, Sénégal.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="q3">
+            <label for="q3">
+                Quand aura lieu AfriConnect Summit ?
+                
+            </label>
+            <div class="answer">
+                <p>
+                    Le sommet est prévu en juillet 2026.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="q4">
+            <label for="q4">
+                Qui peut participer à l'événement ?
+                
+            </label>
+            <div class="answer">
+                <p>
+                    Les freelances, entreprises, étudiants et
+                    professionnels du numérique peuvent participer.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="q5">
+            <label for="q5">
+                Un certificat de participation est-il disponible ?
+                
+            </label>
+            <div class="answer">
+                <p>
+                    Oui, un certificat sera remis aux participants
+                    après l'événement.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- CARTE GOOGLE MAPS -->
+<section id="contact-map-zone">
+    
+    <div class="contact-text">
+        <h3>Nos coordonnées</h3>
+        <p>Email: contact@AfriConnectSummit.com</p>
+        <p>Téléphone: +221 33 845 67 98 </p>
+        <p>Adresse: 145 Rue ME, Dakar, Sénégal</p>
+    </div>
+
+    <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.328804667452!2d-17.457626026752493!3d14.69398857478719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f52455db2b%3A0x5185b7c58792f17e!2sInstitut%20Sup%C3%A9rieur%20Informatique!5e0!3m2!1sfr!2ssn!4v1783705481165!5m2!1sfr!2ssn" 
+            width="600" height="450" style="border:0;" allowfullscreen="" 
+            loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+       <div class="footer-top">
+        <div class="footer-left-aligned">
+            
+             <a href="index.html" class="logo-box">
+                    <img class="object-contain w-full h-full" src="https://admin.connected.go.ke/assets/8df352de-292b-4d9a-ac09-a6adfcd57780" alt="Logo">
+            </a>
+
+        </div>
+            <a href="contact.html" class="footer-btn">S'inscrire</a>
+    </div>
+            <div class="footer-contact">
+                <p><i class="fas fa-envelope"></i> contact@AfriConnectSummit.com</p>
+                <p><i class="fas fa-phone"></i> +221 33 863 33 95</p>
+            </div>
+               
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+        <p>© 2026 AfriConnect Summit. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+        <button id="back-to-top">↑</button>
+
+</footer>
+   
+<script src="js/main.js"></script>
+   
 </body>
 </html>

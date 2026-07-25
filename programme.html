@@ -4,10 +4,277 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnect Summit - Programme</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+        <div class="bg-programme-section">
+<main>
+        <!-- NAVBAR -->
+
+                   <header>
+        <nav class="navbar">
+            <div class="nav-container">
+
+                <a href="index.html" class="logo-box">
+                    <img class="object-contain w-full h-full" src="https://admin.connected.go.ke/assets/8df352de-292b-4d9a-ac09-a6adfcd57780" alt="Logo">
+                </a>
+                                
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="programme.html">Programme</a></li>
+                        <li><a href="intervenants.html">Intervenants</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                     </ul>    
+                            <button id="theme-toggle" class="btn btn-outline-light btn-circle">
+                            <i class="fa-solid fa-moon"></i>
+                            </button>
+
+                            <button class="hamburger btn-circle" id="hamburger">≡</button>
+                                                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+<!-- HERO INTERNE -->
+<section id="hero-interne">
+
+    <h1>Programme de l'événement</h1>
+    <nav aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span>Programme</span>
+    </nav>
+
+</section>
+
+<!-- PROGRAMME 3 JOURS -->
+<div id="planning">
+    <!-- ONGlets -->
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showDay(1)">Jour 1</button>
+        <button class="tab-btn" onclick="showDay(2)">Jour 2</button>
+        <button class="tab-btn" onclick="showDay(3)">Jour 3</button>
+    </div>
+
+    <!-- JOUR 1 -->
+    <div id="day1" class="tab-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00</td>
+                    <td>Ouverture officielle</td>
+                    <td>Robert Daniel</td>
+                    <td>Salle A</td>
+                </tr>
+                <tr><td>10:30</td>
+                    <td>Intelligence artificielle</td>
+                    <td>Sarah Koné</td>
+                    <td>Salle B</td>
+                </tr>
+                <tr>
+                    <td>14:00</td>
+                    <td>Blockchain et innovation</td>
+                    <td>Marc Diallo</td>
+                    <td>Salle A</td>
+                </tr>
+                <tr>
+                    <td>16:00</td>
+                    <td>Création de startups</td>
+                    <td>Fatou Ndiaye</td>
+                    <td>Salle C</td>
+                </tr>
+                <tr>
+                    <td>18:00</td>
+                    <td>Cérémonie de clôture</td>
+                    <td>Comité organisation</td>
+                    <td>Salle A</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- JOUR 2 -->
+    <div id="day2" class="tab-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00</td>
+                    <td>Cybersécurité</td>
+                    <td>Amadou Fall</td>
+                    <td>Salle A</td>
+                </tr>
+                <tr>
+                    <td>10:30</td>
+                    <td>Entrepreneuriat numérique</td>
+                    <td>Marie Kouassi</td>
+                    <td>Salle B</td>
+                </tr>
+                <tr>
+                    <td>14:00</td>
+                    <td>UX Design</td>
+                    <td>Bintou Sow</td>
+                    <td>Salle C</td>
+                </tr>
+                <tr>
+                    <td>16:00</td>
+                    <td>Investissement technologique</td>
+                    <td>Omar Abdou</td>
+                    <td>Salle A</td>
+                </tr>
+                <tr>
+                    <td>18:00</td>
+                    <td>Session Networking</td>
+                    <td>Participants</td>
+                    <td>Salle B</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- JOUR 3 -->
+    <div id="day3" class="tab-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00</td>
+                    <td>Data et analyse</td>
+                    <td>Pascal Roberto</td>
+                    <td>Salle A</td>
+                </tr>
+                <tr>
+                    <td>10:30</td>
+                    <td>Robotique africaine</td>
+                    <td>Zaira Ada</td>
+                    <td>Salle B</td>
+                </tr>
+                <tr>
+                    <td>14:00</td>
+                    <td>Future de la Tech</td>
+                    <td>Halimatou Diop</td>
+                    <td>Salle C</td>
+                </tr>
+                <tr>
+                    <td>16:00</td>
+                    <td>Table ronde finale</td>
+                    <td>Experts invités</td>
+                    <td>Salle A</td>
+                </tr>
+                <tr>
+                    <td>18:00</td>
+                    <td>Clôture du sommet</td>
+                    <td>Organisation</td>
+                    <td>Salle principale</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>   
+
+
+
+<!-- THEMATIQUES -->
+<section id="thematiques">
+    <h2>Nos thématiques</h2>
+    <div class="grid-thematiques">
+        
+        <!-- IA & Tech (Couleur 1) -->
+        <article class="card card-ia">
+            <div class="icon"><i class="fa-solid fa-robot"></i></div>
+            <h3>IA & Tech</h3>
+            <p>Intelligence artificielle africaine.</p>
+        </article>
+
+        <!-- Business (Couleur 2) -->
+        <article class="card card-business">
+            <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3>Business</h3>
+            <p>Stratégies de croissance.</p>
+        </article>
+
+        <!-- Design (Couleur 3) -->
+        <article class="card card-design">
+            <div class="icon"><i class="fa-solid fa-palette"></i></div>
+            <h3>Design</h3>
+            <p>Expérience utilisateur et création numérique.</p>
+        </article>
+
+        <!-- Data (Couleur 4) -->
+        <article class="card card-data">
+            <div class="icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Data</h3>
+            <p>Innovation grâce aux données.</p>
+        </article>
+        
+    </div>
+</section>
+
+</main>
+        </div>
+   
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-left-aligned">
+            
+             <a href="index.html" class="logo-box">
+                    <img class="object-contain w-full h-full" src="https://admin.connected.go.ke/assets/8df352de-292b-4d9a-ac09-a6adfcd57780" alt="Logo">
+            </a>
+
+        </div>
+
+            <a href="contact.html" class="footer-btn">S'inscrire</a>
+    </div>
+            <div class="footer-contact">
+                <p><i class="fas fa-envelope"></i> contact@AfriConnectSummit.com</p>
+                <p><i class="fas fa-phone"></i> +221 33 863 33 95</p>
+            </div>
+        
+    <div class="footer-divider"></div>
     
+    <div class="footer-bottom">
+        <p>© 2026 AfriConnect Summit. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+           <button id="back-to-top">↑</button>
+
+</footer>
+
 <script src="js/main.js"></script>
 
 </body>

@@ -4,11 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnect Summit - Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     
-     <script src="js/main.js"></script>  
+    <div id="hero-video-section">
+        <video autoplay muted loop playsinline preload="auto" class="bg-video">
+            <source src="images/video/fond.mp4" type="video/mp4">
+        </video>
+                                  
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+
+                <a href="index.html" class="logo-box">
+                    <img class="object-contain w-full h-full" src="https://admin.connected.go.ke/assets/8df352de-292b-4d9a-ac09-a6adfcd57780" alt="Logo">
+                </a>
+                                
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="programme.html">Programme</a></li>
+                        <li><a href="intervenants.html">Intervenants</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                     </ul>    
+                            <button id="theme-toggle" class="btn btn-outline-light btn-circle">
+                            <i class="fa-solid fa-moon"></i>
+                            </button>
+
+                            <button class="hamburger btn-circle" id="hamburger">≡</button>
+                                                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+<main>
+<!-- SECTION HERO -->
+    <div class="hero-container-wrapper">
+
+        <section id="hero">
+            <h1>L'avenir de la tech africaine</h1>
+            <p>Dakar, Sénégal - lundi 31 descembre 2026 à 10h00</p>
+            <div class="cta-group">
+
+                 <a href="contact.html" class="btn">S'Inscrire 2026</a>
+                 <a href="programme.html" class="btn">Découvrir</a>
+
+            </div>
+            <div id="countdown" role="region" aria-label="Compte à rebours avant l'événement">
+                <span id="days">00</span>j : <span id="hours">00</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
+            </div>
+        </section>
+    </div>
+
+<!-- SECTION CHIFRES CLÉS-->
+        <section id="chiffres">
+            <h2>L'événement en chiffres</h2>
+            <div class="stats-grid">
+                <article class="stat-item"><h3>+1200</h3><p>Participants</p></article>
+                <article class="stat-item"><h3>48</h3><p>Intervenants</p></article>
+                <article class="stat-item"><h3>3</h3><p>Jours</p></article>
+                <article class="stat-item"><h3>12</h3><p>Pays</p></article>
+            </div>
+        </section>
+</main>       
+    </div> 
+
+<!-- POURQUOI PARTICIPER -->
+ <div class="bg-pourquoi"> 
+
+       <section id="pourquoi">
+            <h2>Pourquoi participer ?</h2>
+            <div class="flex-container">
+                <div class="card card-Innovation">
+                    <div class="icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Découvrez les innovations qui façonnent l'avenir de la technologie en Afrique.</p>
+                </div>
+
+                    <div class="card card-Réseautage">
+                        <div class="icon">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3>Réseautage</h3>
+                        <p>Échangez avec des entrepreneurs, développeurs et investisseurs venus de plusieurs pays africains.</p>
+                    </div>
+
+                <div class="card card-Inspiration">
+                    <div class="icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3>Inspiration</h3>
+                    <p>Participez à des conférences inspirantes avec des intervenants de renommée internationale.</p>
+                </div>
+        </div>
+    </section>
      
+</div> 
+
+<!-- INTERVENANTS VEDETTES -->
+ <div class="bg-intervenants-vedettes">
+
+        <section id="intervenants-vedettes">
+            <h2>Intervenants Vedettes</h2>
+            <div class="intervenants-grid">
+                <article class="card">
+                    <img src="images/photo1.jpg" alt="Intervenant 1"><h3>Adama Diop</h3>
+                    <p>Data Scientist</p>
+                    <p class="pays">Sénégal</p>
+                </article>
+
+                <article class="card">
+                    <img src="images/photo2.jpg" alt="Intervenant 2"><h3>Mohamed Ali</h3>
+                    <p>Entrepreneur</p>
+                    <P class="pays">Comores</P>
+                </article>
+
+                <article class="card">
+                    <img src="images/photo3.jpg" alt="Intervenant 3"><h3>Rose Marie</h3>
+                    <p>Expert IA</p>
+                    <p class="pays">Maroc</p>
+                </article>
+
+                <article class="card">
+                    <img src="images/photo4.jpg" alt="Intervenant 4"><h3>Sarr Modou</h3>
+                    <p>DevOps Lead</p>
+                    <p class="pays">Mali</p>
+                </article>
+            </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                 <a href="intervenants.html" class="btn-voir-plus">Voir tous les intervenants</a>
+                </div>
+        </section>
+</div>
+
+<!-- SPONSORS -->
+<div class="bg-sponsors">
+        <section id="sponsors">
+            <h2>Nos Partenaires</h2>
+            <div class="sponsors-flex">
+                <div class="or">Sponsor Or</div>
+                <div class="argent">Sponsor Argent</div>
+                <div class="bronze">Sponsor Bronze</div>
+            </div>
+        </section>
+</div> 
+ 
+<!-- FOOTER -->  
+<footer>
+<div class="footer-top">
+    <div class="footer-left-aligned">
+        
+        <a href="index.html" class="logo-box">
+                <img class="object-contain w-full h-full" src="https://admin.connected.go.ke/assets/8df352de-292b-4d9a-ac09-a6adfcd57780" alt="Logo">
+        </a>
+
+    </div>
+        <a href="contact.html" class="footer-btn">S'inscrire</a>
+</div>
+        <div class="footer-contact">
+            <p><i class="fas fa-envelope"></i> contact@AfriConnectSummit.com</p>
+            <p><i class="fas fa-phone"></i> +221 33 863 33 95</p>
+        </div>
+
+<div class="footer-divider"></div>
+
+<div class="footer-bottom">
+    <p>© 2026 AfriConnect Summit. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+</div>
+            <button id="back-to-top">↑</button>
+</footer>
+
+       <script src="js/main.js"></script>  
+        
+       
 </body>
 </html>

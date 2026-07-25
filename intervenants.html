@@ -4,11 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnect Summit - Intervenants</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-     <script src="js/main.js"></script>  
-     
+    <div class="header-image-container">
+<header>
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-box">
+                <img class="object-contain w-full h-full" src="https://admin.connected.go.ke/assets/8df352de-292b-4d9a-ac09-a6adfcd57780" alt="Logo">
+            </a>
+                            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    </ul>    
+                        <button id="theme-toggle" class="btn btn-outline-light btn-circle">
+                        <i class="fa-solid fa-moon"></i>
+                        </button>
+
+                        <button class="hamburger btn-circle" id="hamburger">≡</button>
+                                                
+            </div>
+        </div>
+    </nav>
+</header>
+
+ <!-- HERO INTERNE -->
+        <section id="hero-interne">
+            <h1>Nos Intervenants</h1>
+            <nav aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a>
+                  <span>Intervenants</span>
+            </nav>
+        </section>
+
+<!-- FILTRAGE DYNAMIQUE -->
+        <div id="filtres">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="ia">IA & Tech</button>
+            <button class="filter-btn" data-filter="business">Business</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="data">Data</button>
+        </div>
+    </div>
+<main>  
+
+<!-- GRILLE D'INTERVEN -->
+    <div id="grille-intervenants">
+        <article class="intervenant-card" data-category="ia">
+            <img src="images/expert1.jpg" alt="Expert IA">
+            <h2>Halimatou Diop</h2>
+            <p>Spécialiste IA</p>
+            <span>Sénégal</span>
+        </article> 
+
+        <article class="intervenant-card" data-category="business">
+            <img src="images/expert2.jpg" alt="Expert Business">
+            <h3>Jacob Criss</h3>
+            <p>Stratégie Business</p>
+            <span>Côte d'Ivoire</span>
+        </article>
+
+        <article class="intervenant-card" data-category="design">
+            <img src="images/expert3.jpg" alt="Expert Design">
+            <h3>Bintou Sow</h3>
+            <p>UX Design</p>
+            <span>Sénégal</span>
+        </article> 
+
+        <article class="intervenant-card" data-category="data">
+            <img src="images/expert4.jpg" alt="Expert Data">
+            <h3>Marie Justin</h3>
+            <p>Data Scientist</p>
+            <span>Ghana</span>
+        </article>
+
+        <article class="intervenant-card" data-category="ia">
+            <img src="images/expert5.jpg" alt="Expert IA">
+            <h3>Djonn Smith</h3>
+            <p>Ingénieure Machine Learning</p>
+            <span>Éthiopie</span>
+        </article>
+
+        <article class="intervenant-card" data-category="business">
+            <img src="images/expert6.jpg" alt="Expert Business">
+            <h3>Omar Abdou</h3>
+            <p>Entrepreneur</p>
+            <span>Comores</span>
+        </article>
+
+        <article class="intervenant-card" data-category="design">
+            <img src="images/expert7.jpg" alt="Expert Design">
+            <h3>Fatou Ndiaye</h3>
+            <p>Design Graphique</p>
+            <span>Sénégal</span>
+        </article>
+
+        <article class="intervenant-card" data-category="data">
+            <img src="images/expert8.jpg" alt="Expert Data">
+            <h3>Pascal Roberto</h3>
+            <p>Analyse de données</p>
+            <span>Nigeria</span>
+        </article>
+
+        <article class="intervenant-card" data-category="ia">
+            <img src="images/expert9.jpg" alt="Expert IA">
+            <h3>Zair Ada</h3>
+            <p>Robotique</p>
+            <span>Kenya</span>
+        </article>
+        
+    </div>
+</main>
+   
+
+
+<!-- FOOTER --> 
+ <footer>
+       <div class="footer-top">
+        <div class="footer-left-aligned">
+            
+             <a href="index.html" class="logo-box">
+                    <img class="object-contain w-full h-full" src="https://admin.connected.go.ke/assets/8df352de-292b-4d9a-ac09-a6adfcd57780" alt="Logo">
+            </a>
+
+        </div>
+            <a href="contact.html" class="footer-btn">S'inscrire</a>
+    </div>
+            <div class="footer-contact">
+                <p><i class="fas fa-envelope"></i> contact@AfriConnectSummit.com</p>
+                <p><i class="fas fa-phone"></i> +221 33 863 33 95</p>
+            </div>
+               
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+        <p>© 2026 AfriConnect Summit. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+        <button id="back-to-top">↑</button>
+
+</footer>
+
+    <script src="js/main.js"></script>  
 </body>
 </html>
