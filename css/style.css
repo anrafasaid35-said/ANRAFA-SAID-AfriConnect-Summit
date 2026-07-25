@@ -774,6 +774,14 @@ body.dark nav a {
 /* ========================================== */
 /* MEDIA QUERIES (RESPONSIVE)            */
 /* ========================================== */
+/* Liens du menu en blanc lorsqu'il est ouvert */
+@media (max-width: 768px) {
+    .nav-links.active li a,
+    .nav-links.active a {
+        color: #ffffff !important;
+    }
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex !important;
