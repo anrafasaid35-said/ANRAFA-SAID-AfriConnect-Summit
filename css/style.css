@@ -599,3 +599,299 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+* RÈGLES GLOBALES DU MODE SOMBRE      */
+/* ========================================== */
+body.dark #chiffres {
+    background-color: transparent !important;
+}
+
+body.dark #chiffres h2 {
+    color: #f1f5f9 !important;
+}
+
+body.dark #thematiques,
+
+body.dark #grille-intervenants,
+body.dark #form-section,
+body.dark #faq,
+body.dark #contact-map-zone,
+body.dark .header-image-container,
+body.dark .bg-sponsors,
+body.dark #sponsors,
+body.dark footer,
+body.dark .footer,
+body.dark #pourquoi,
+body.dark #intervenants-vedettes {
+    background-color: #040404 !important;
+    background-image: none !important; 
+}
+
+/*-- Assure la position du voile --*/
+.bg-programme-section {
+    position: relative;
+}
+
+/*-- Voile transparent par défaut en mode clair --*/
+.bg-programme-section .programme-overlay-voile {
+    display: none;
+}
+
+/* -- Apparition d'une voile léger en mode sombre par-dessus backgroud image -- */
+body.dark .bg-programme-section {
+    position: relative;
+}
+
+body.dark .bg-programme-section .programme-overlay-voile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    pointer-events: none; 
+    z-index: 1;
+}
+
+/*--Luminositer et visibiliter du texte --*/
+.bg-programme-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+body.dark #thematiques h2,
+body.dark #grille-intervenants h2,
+body.dark #faq h2,
+body.dark #sponsors h2,
+body.dark .contact-text h3,
+body.dark .contact-text p,
+body.dark footer h2,
+body.dark footer h3,
+body.dark footer p,
+body.dark footer span {
+    color: #f1f5f9 !important;
+}
+
+body.dark header {
+    background-color: #0f172a !important; 
+    background-image: none !important;
+    border: none !important;
+    border-bottom: 1px solid #1e293b !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark header .navbar,
+body.dark header nav,
+body.dark header .container {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+body.dark header a,
+body.dark header .nav-links a {
+    color: #f8fafc !important;
+}
+
+body.dark .card,
+body.dark [class*="card"],
+body.dark .box,
+body.dark .intervenant-card,
+body.dark .stat-item {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark table {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+}
+
+body.dark th, 
+body.dark td {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+    border-color: #334155 !important;
+}
+
+body.dark .filter-btn,
+body.dark .tab-btn {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+    border-color: #334155 !important;
+}
+
+body.dark .tab-btn.active,
+body.dark .filter-btn.active {
+    background-color: var(--primary) !important;
+    color: #ffffff !important;
+}
+
+body.dark input, 
+body.dark select, 
+body.dark textarea {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+    border: 1px solid #334155 !important;
+}
+
+body.dark input::placeholder, 
+body.dark textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+body.dark a {
+    color: #f1f5f9 !important;
+}
+
+body.dark nav ul li a,
+body.dark nav a {
+    color: #f8fafc !important;
+}
+
+/* -- tVoile sombre vidéo (mode sombre0-- */
+.video-overlay-voile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45); 
+    pointer-events: none; 
+    z-index: 1; 
+    transition: background-color 0.3s ease;
+}
+
+/*-- Prepare le conteneur vidéo à recevoir le voile -- */
+#hero-video-section {
+    position: relative;
+}
+
+/* ========================================== */
+/* MEDIA QUERIES (RESPONSIVE)            */
+/* ========================================== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary, #0760e6);
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        background-color: #03061b; 
+    }
+
+    .flex-container {
+        flex-direction: column; 
+        align-items: center;    
+    }
+
+    #pourquoi .card {
+        width: 100%;          
+        max-width: 400px;     
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+        padding: 0 15px;
+    }
+
+    .stat-item {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    nav ul { 
+        display: none; 
+    }
+}
+
+@media (max-width: 600px) {
+    html, body {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    header, .navbar, .nav-container, header > div {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    header {
+        padding: 8px 5px !important; 
+    }
+
+    .logo-box {
+        max-width: 65% !important; 
+        gap: 8px;
+    }
+
+    .logo-box img {
+        max-width: 85px !important; 
+    }
+
+    .nav-right {
+        gap: 4px !important; 
+        margin-right: 0 !important;
+    }
+
+    #hero {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .cta-group {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        box-sizing: border-box !important;
+    }
+
+    .cta-group a, 
+    .cta-group button {
+        width: 38% !important;
+        max-width: 120px !important;
+        padding: 8px 4px !important;
+        font-size: 11px !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+    }
+
+    .logo-reduit {
+        max-width: 80px; 
+        height: auto;
+        margin-left: 0 !important;
+    }
+}
